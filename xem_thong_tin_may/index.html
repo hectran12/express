@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1><div id="title"></div></h1>
+        <div id="buttons"></div>
+    </center>
+    
+    <script>
+        var buttons = document.getElementById("buttons");
+        var title = document.getElementById("title");
+        const get = ['os', 'memory', 'freememory'];
+
+        get.forEach(function (value) {
+            buttons.innerHTML += `<button onclick="${value}()">${value}</button>`;
+        });
+
+
+        function os () {
+            title.innerHTML = 'TEN_HE_THONG';
+        }
+
+        function memory () {
+            title.innerHTML = 'TONG_SO_RAM';
+        }
+
+        function freememory () {
+            title.innerHTML = 'FREE_RAM';
+        }
+    </script>
+</body>
+</html>
